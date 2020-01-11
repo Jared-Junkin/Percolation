@@ -1,0 +1,63 @@
+BFS Simulation results
+simulation data for 10 trials
+grid	mean	stddev	total time
+100	0.593	0.019	0.085
+200	0.596	0.006	0.130
+400	0.592	0.006	0.685
+800	0.592	0.003	3.772
+1600	0.594	0.002	30.220
+3200	0.593	0.001	210.072
+
+BFS Simulation with twwenty trials
+simulation data for 20 trials
+grid	mean	stddev	total time
+100	0.593	0.014	0.144
+200	0.591	0.010	0.239
+400	0.590	0.006	1.224
+800	0.594	0.004	5.940
+1600	0.592	0.002	38.834
+3200	0.593	0.001	203.546
+
+DFS Fast simulation results
+simulation data for 10 trials
+grid	mean	stddev	total time
+100	0.593	0.019	0.082
+200	0.596	0.006	0.102
+400	0.592	0.006	0.546
+800	0.592	0.003	3.499
+
+
+UF simulation results
+simulation data for 10 trials
+grid	mean	stddev	total time
+100	0.593	0.019	0.086
+200	0.596	0.006	0.122
+400	0.592	0.006	0.536
+800	0.592	0.003	2.203
+1600	0.594	0.002	9.145
+3200	0.593	0.001	47.072
+
+UF Simulation results 20 trials
+simulation data for 20 trials
+grid	mean	stddev	total time
+100	0.593	0.014	0.083
+200	0.591	0.010	0.178
+400	0.590	0.006	0.771
+800	0.594	0.004	5.275
+1600	0.592	0.002	23.109
+3200	0.593	0.001	96.973
+
+
+1. Doubling the grid size increases the run time exponentially. It seems to be increasing in O(n^2) time, which
+makes sense given that when you double the size you are quadrupling the number of total grids, because 2^2 = 4.
+(size = 5 yields 25 grids, while size = 10 yields 100 grids. Tripling size would yield 3^2 * (size ^ 3) grids.
+
+2. doubling the total number of trials doubles the run time.
+
+3. There are 86400 seconds in 24 hours. Given that 800 grids with 20 trials yields a runtime of approximately 5 seconds,
+and doubling the number of grids multiplies the runtime by 4, we could double 3200 a little less than 5 more times before we have
+a runtime exceeding 86400 seconds
+
+
+
+
